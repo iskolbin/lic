@@ -4,7 +4,7 @@ Lua interpolative compression
 Library which transforms series of values into series of polymomial coeffitients
 of the interpolators. Rationale of this is to reduce data size needed. For
 example you have highly accurate coordinates of the body during physics
-simulations. If you want to make some demo of it you don't need the whole array
+simulations and if you want to make some demo of it you don't need the whole array
 of the coorinates, you can approximate with some precision them reducing needed
 memory.
 
