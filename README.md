@@ -11,8 +11,8 @@ memory.
 line( xs, ys, err[, abxs ])
 -------------------------
 
-Evaluate interpolators coeffitients using linear approximations with maximal
-absolute error `err`. Arguments `xs` must be monotonous, `ys` is any nonnan
+Evaluate linear interpolators coeffitients with maximal absolute error not
+greater than `err`. Arguments `xs` must be monotonous, `ys` is any nonnan
 numbers array. Also you can pass output array.
 
 fline( x0, dx, ys, err[, abxs ])
