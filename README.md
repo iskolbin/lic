@@ -8,15 +8,20 @@ simulations and if you want to make some demo of it you don't need the whole arr
 of the coorinates, you can approximate with some precision them reducing needed
 memory.
 
-line( xs, ys, err[, abxs ])
--------------------------
+ic.pack1( xs, ys, err[, abxs ])
+-------------------------------
 
 Evaluate linear interpolators coeffitients with maximal absolute error not
 greater than `err`. Arguments `xs` must be monotonous, `ys` is any nonnan
 numbers array. Also you can pass output array.
 
-fline( x0, dx, ys, err[, abxs ])
---------------------------------
+ic.fpack1( x0, dx, ys, err[, abxs ])
+------------------------------------
 
-Same as `line` but with homogeneous distributed arguments starting from `x0`
+Same as `pack1` but with homogeneous distributed arguments starting from `x0`
 with step `dx`.
+
+ic.funpack1( x0, dx, abxs[, xs, ys])
+------------------------------------
+
+Fills `xs` and `ys` with arguments and values from coeffitients `abxs`.
