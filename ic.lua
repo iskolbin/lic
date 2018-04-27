@@ -72,4 +72,21 @@ function ic.funpack1( x0, dx, abxs, xs, ys )
 	return xs, ys
 end
 
+function ic.pack2( xs, ys, err, abcxs )
+	error('uninplemented')
+	abcxs = abcxs or {}
+	local a1, b1, c1 = 0, 0
+	local i, j, n, g = 1, 2, #ys, 1
+	if n < 2 or #xs ~= n then
+		return abcxs
+	end
+	local abs = math.abs
+	local dx31, dx21, dx32, dy12 = x3-x1, x2-x1, x3-x2, y1-y2
+	local a = (x1*(y2-y3) + x2*(y3-y1) + x3*dy12) / (dx31 * dx32 * dx21)
+	local b = -dy12 / dx21 - (x1+x2)*a
+	local c = y1 - x1*x1*a - x1*b
+	return abcxs
+end
+
+
 return ic
