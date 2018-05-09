@@ -60,7 +60,7 @@ function ic.unpack1( xs, abxs, ys_ )
 	local g, a, b, maxx, x, ok = 1, 0, 0, 0, xs[1], true
 	for i = 1, #abxs, 3 do
 		a, b, maxx = abxs[i], abxs[i+1], abxs[i+2]
-		while ok and x < maxx do
+		while ok and x <= maxx do
 			ys[g] = a*x + b
 			g = g + 1
 			x = xs[g]
@@ -129,7 +129,7 @@ function ic.unpack2( xs, abcxs, ys_ )
 	local g, a, b, c, maxx, x, ok = 1, 0, 0, 0, 0, xs[1], true
 	for i = 1, #abcxs, 4 do
 		a, b, c, maxx = abcxs[i], abcxs[i+1], abcxs[i+2], abcxs[i+3]
-		while ok and x < maxx do
+		while ok and x <= maxx do
 			ys[g] = a*x*x + b*x + c
 			g = g + 1
 			x = xs[g]
